@@ -10,8 +10,8 @@
     <div class="container">
       <div class="calculator">
         <div class="calculations">
-          <input type="number" class="result" />
-          <input type="text" class="calculation" />
+          <input type="text" class="result" readonly id="result" />
+          <input type="text" class="calculation" placeholder="0"  id="display" />
         </div>
         <div class="btns">
           <!-- first 4 btns -->
@@ -30,7 +30,7 @@
               />
             </svg>
           </button>
-          <button class="clac_btn" id="backcolor_operator">
+          <button  class="clac_btn" id="backcolor_operator">
             <svg viewBox="0 0 384 512" class="clear_btn"><path d="M329.1 142.9c-62.5-62.5-155.8-62.5-218.3 0s-62.5 163.8 0 226.3s155.8 62.5 218.3 0c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3c-87.5 87.5-221.3 87.5-308.8 0s-87.5-229.3 0-316.8s221.3-87.5 308.8 0c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"/></svg>
             </svg>
           </button>
@@ -39,45 +39,45 @@
               <path fill="currentColor" d="M96 224c53 0 96-43 96-96s-43-96-96-96S0 75 0 128s43 96 96 96zm0-156c33.1 0 60 26.9 60 60s-26.9 60-60 60-60-26.9-60-60 26.9-60 60-60zm192 220c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 156c-33.1 0-60-26.9-60-60s26.9-60 60-60 60 26.9 60 60-26.9 60-60 60zm59.8-412H378c5 0 7.8 5.7 4.8 9.6L41 477.6c-1.1 1.5-2.9 2.4-4.8 2.4H6c-5 0-7.8-5.7-4.8-9.6L343 34.4c1.1-1.5 2.9-2.4 4.8-2.4z"></path>
             </svg>
           </button>
-          <button class="clac_btn" id="backcolor_operator">
+          <button  class="clac_btn" id="backcolor_operator">
             <svg aria-hidden="true" viewBox="0 0 384 512" class="divid_btn">
               <path fill="currentColor" d="M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8zM192 336c-26.46 0-48 21.54-48 48s21.54 48 48 48 48-21.54 48-48-21.54-48-48-48zm0-160c26.46 0 48-21.54 48-48s-21.54-48-48-48-48 21.54-48 48 21.54 48 48 48z"></path>
             </svg>
           </button>
           <!-- second 4 btns -->
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('7')" class="clac_btn num_btn" id="backcolor_number">
             7
           </button>
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('8')" class="clac_btn num_btn" id="backcolor_number">
             8
           </button>
-          <button class="clac_btn" id="backcolor_number" >
+          <button onclick="appendToDisplay('9')" class="clac_btn num_btn" id="backcolor_number" >
             9
           </button>
-          <button class="clac_btn" id="backcolor_operator">
+          <button  class="clac_btn" id="backcolor_operator">
             <svg aria-hidden="true" viewBox="0 0 320 512" class="multiple_btn"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>
           </button>
           <!-- third 4 btns -->
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('4')" class="clac_btn num_btn" id="backcolor_number">
             4
           </button>
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('5')" class="clac_btn num_btn" id="backcolor_number">
             5
           </button>
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('6')" class="clac_btn num_btn" id="backcolor_number">
             6
           </button>
           <button class="clac_btn" id="backcolor_operator">
             <svg aria-hidden="true" viewBox="0 0 384 512" class="plus_btn"><path fill="currentColor" d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" class=""></path></svg>
           </button>
           <!-- fourth 4 btns -->
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('1')" class="clac_btn num_btn" id="backcolor_number">
             1
           </button>
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('2')" class="clac_btn num_btn" id="backcolor_number">
             2
           </button>
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('3')" class="clac_btn num_btn" id="backcolor_number">
             3
           </button>
           <button class="clac_btn" id="backcolor_operator">
@@ -85,11 +85,11 @@
             </svg>
           </button>
           <!-- fifth 4 btns -->
-          <button class="clac_btn" id="backcolor_number">
+          <button onclick="appendToDisplay('0')" class="clac_btn num_btn" id="backcolor_number">
             0
           </button>
-          <button class="clac_btn" id="backcolor_number">
-            <p class="point_btn">.</p>
+          <button onclick="appendToDisplay('.')" class="clac_btn num_btn" id="backcolor_number">
+            .
           </button>
           <button class="clac_btn" id="equal_btn">
             <svg aria-hidden="true" viewBox="0 0 384 512" class="equal_btn" ><path fill="currentColor" d="M376 304H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8zm0-144H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z" class=""></path></svg>

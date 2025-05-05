@@ -33,12 +33,14 @@ body {
 }
 .result,
 .calculation {
-  height: 6rem;
+  height: 5rem;
   direction: rtl;
   border: none;
   outline: none;
   font-size: 3rem;
+  margin-bottom: 3rem;
 }
+
 .calculation {
   color: #444;
 }
@@ -60,6 +62,7 @@ body {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   box-shadow: 0 0 2px #999;
+  cursor: pointer;
 }
 .remove_btn,
 .clear_btn,
