@@ -1,6 +1,6 @@
-const resultInput = document.querySelector("result");
+const resultInput = document.querySelector(".result");
 const calcInput = document.querySelector(".calculation");
-const removeBtn = document.querySelector(".backcolor_remove");
+const removeBtn = document.getElementById("remove");
 const display = document.getElementById("display");
 const result = document.getElementById("result");
 // operators
@@ -18,6 +18,7 @@ function appendToDisplay(value) {
 
 clearBtn.addEventListener("click", function () {
   calcInput.value = "";
+  resultInput.value = "";
 });
 
 percentBtn.addEventListener("click", function () {
@@ -41,8 +42,21 @@ minusBtn.addEventListener("click", function () {
 });
 // Calculation values
 equalBtn.addEventListener("click", function () {
-  if (calcInput.append("%")) {
-    calcInput %= calcInput;
+  try {
+    let expression = calcInput.value
+      .replace(/×/g, "*")
+      .replace(/÷/g, "/")
+      .replace(/%/g, "*0.01");
+
+    const result = eval(expression);
+
+    resultInput.value = result;
+
+    calcInput.value = "";
+  } catch (err) {
+    resultInput.value = "Error";
   }
-  console.log(calcInput.value);
+});
+removeBtn.addEventListener("click", function () {
+  calcInput.value = calcInput.value.slice(0, -1);
 });
